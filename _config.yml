@@ -24,8 +24,9 @@ github_username: cesarcosta99
 # Build settings
 markdown: kramdown
 permalink: /:title
-gems:
-  - jekyll-assets
+sass:
+  sass_dir: assets/css
+  style: compressed
 
 exclude:
   - Gemfile
