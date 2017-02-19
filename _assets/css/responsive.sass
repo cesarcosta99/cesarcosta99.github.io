@@ -1,0 +1,117 @@
+@media (min-width: 30rem)
+  .header
+    flex-flow: row wrap
+
+  .header__title-description
+    width: 60%
+
+  .header__title
+    text-align: left
+
+  .header__description
+    text-align: left
+
+  .header__menu
+    width: 40%
+    margin: 0
+    display: flex
+    align-self: center
+    justify-content: flex-end
+
+  .main__post__meta__date,
+  .main__post__meta__reading-time,
+  .main__post__meta__tags,
+  .main__post__meta .dot-divider
+    display: inline
+
+  .highlight
+    margin-left: 2.5rem
+    margin-right: 2.5rem
+
+@media (min-width: 40rem)
+  .header__profile-photo
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    width: 20%
+    align-self: center
+    justify-content: center
+
+    img
+      width: 70%
+      height: 70%
+      border-radius: 50%
+      max-width: 90px
+      max-height: 90px
+
+  .header__title-description
+    width: 50%
+
+  .header__menu
+    width: 30%
+
+@media (min-width: 64rem)
+  .header
+    flex-flow: column wrap
+    position: fixed
+    height: 100%
+    width: 22rem
+    align-items: center
+    justify-content: center
+    padding: 0
+
+  .header__profile-photo
+    text-align: center
+    display: block
+    width: 100%
+
+    img
+      width: 40%
+      height: auto
+      border-radius: 50%
+      max-width: initial
+      max-height: initial
+
+  .header__title-description
+    width: 100%
+
+  .header__title
+    font-size: 1.5rem
+    text-align: center
+
+  .header__description
+    text-align: center
+
+  .header__menu
+    margin-bottom: 0
+    width: 100%
+    align-self: initial
+    justify-content: center
+
+  .header__social
+    text-align: center
+    margin-top: 1.5rem
+    display: block
+
+  .header__social__media
+    margin: 1rem
+    width: 4rem
+    height: 4rem
+    transition: transform ease-in-out .15s
+    margin-bottom: 0
+
+    &:hover,
+    &:focus
+      transform: scale(1.1)
+
+  .main
+    width: calc(90% - 22rem)
+    margin-left: 22rem
+    padding: 2rem 5% 3rem
+
+  .main__post__content,
+  .main__page__content
+    .visible-only-large
+      display: inline-block

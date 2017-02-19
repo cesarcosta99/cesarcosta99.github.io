@@ -1,0 +1,88 @@
+*
+  outline: 0 none
+
+html
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+  font-size: 100%
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display: block
+
+body
+  margin: 0
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
+  color: #777
+
+a
+  color: $primary
+  text-decoration: none
+
+strong
+  color: $primary
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: $primary
+
+blockquote
+  border-left: 0.25rem solid #e5e5e5
+  margin-left: 0
+  margin-right: 0
+  padding: .5rem .8rem
+
+  *
+    color: rgba(0,0,0,.25)
+
+    &:last-child
+      margin-bottom: 0
+
+
+p
+  margin-top: 0
+  margin-bottom: 1.5rem
+
+ul
+  list-style: circle outside
+
+table
+  width: 100%
+  border-spacing: 0
+  margin-bottom: 1.5rem
+  overflow-x: auto
+  display: block
+
+td,
+th
+  padding: .5rem .8rem
+  text-align: left
+  border-bottom: 1px solid #ddd
+
+  &:first-child
+    padding-left: 0
+
+  &:last-child
+    padding-right: 0
+
+tr:last-child td
+  border-bottom: none
+
+hr
+  border-style: solid
+  color: $primary
+  margin: 1.5rem auto

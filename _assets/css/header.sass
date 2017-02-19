@@ -1,0 +1,40 @@
+.header
+  background-color: $background
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+  flex-flow: column wrap
+  text-align: center
+  padding: 0 5%
+  overflow: hidden
+
+  a
+    color: $primary
+
+    &:hover,
+    &:focus
+      color: $secondary
+
+.header__profile-photo
+  display: none
+
+.header__title
+  margin-bottom: 0
+
+.header__description
+  font-size: .8rem
+  color: lighten($primary, 20%)
+  margin-top: 0
+  margin-bottom: 1.8rem
+
+.header__menu
+  margin-bottom: 1rem
+
+  a
+    padding: 0 .5rem
+    transition: color ease-in-out .2s
+
+.header__social
+  display: none

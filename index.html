@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+order: 0
+---
+
+<h1 class="main__index__title">Recent posts</h1>
+
+{% if site.posts.size > 0 %}
+  <div class="main__posts">
+    {% for post in site.posts limit: 10 %}
+      <h2 class="main__posts__item"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="main__posts__item__meta">
+        <span>{{ post.date | date: '%B %d, %Y' }}</span>
+        <span class="dot-divider"></span>
+        <span>
+          {% for tag in post.tags %}
+            #{{ tag }}
+          {% endfor %}
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <h2>No posts found.</h2>
+{% endif %}
