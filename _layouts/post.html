@@ -1,6 +1,5 @@
 ---
 layout: default
-comments: true
 ---
 {% include minutes-to-read.html %}
 
@@ -13,44 +12,13 @@ comments: true
     <span class="dot-divider"></span>
     <span class="main__post__meta__tags">
       {% for tag in page.tags %}
-        #{{ tag }}
+        #{{ tag | slugify }}
       {% endfor %}
     </span>
   </div>
   <div class="main__post__content">{{ content }}</div>
 </article>
 
-<section class="main__share">
-    <h3 class="main__share__title">Share</h3>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
-      <svg class="main__share__icon main__share__icon--facebook"><use xlink:href="#icon-facebook"></use></svg>
-    </a>
-    <a href="https://twitter.com/intent/tweet?text=&quot;{{ page.title }}&quot;%20{{ site.url }}{{ page.url }}&hashtags={% for tag in page.tags %}{{tag}},{% endfor %}"
-    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
-      <svg class="main__share__icon main__share__icon--linkedin"><use xlink:href="#icon-twitter"></use></svg>
-    </a>
-    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
-    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
-      <svg class="main__share__icon main__share__icon--google-plus"><use xlink:href="#icon-google-plus"></use></svg>
-    </a>
-</section>
+{% include share.html %}
 
-{% if page.comments %}
-  <section class="mains__comments">
-    <div id="disqus_thread"></div>
-    <script>
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//cesar-costa.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-      var disqus_config = function () {
-        this.page.title = '{{ page.title }}';
-        this.page.url = '{{ site.url }}{{ page.url }}';
-        this.page.identifier = '{{ page.url }}';
-      }
-    </script>
-  </section>
-{% endif %}
+{% include comments.html %}

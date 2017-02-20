@@ -1,0 +1,29 @@
+<header class="header">
+  <a href="/" class="header__profile-photo"><img src="/assets/img/profile-photo.jpeg" alt="Me smiling" /></a>
+
+  <div class="header__title-description">
+    <h1 class="header__title"><a href="/">{{ site.title }}</a></h1>
+    <h2 class="header__description">{{ site.description }}</h2>
+  </div>
+
+  <nav class="header__menu">
+    {% assign sorted_pages = site.pages | sort:'order' %}
+    {% for page in sorted_pages %}
+    {% if page.title %}
+        <a class="header__menu__item" href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+    {% endfor %}
+  </nav>
+
+  <div class="header__social">
+    <a href="https://github.com/cesarcosta99" target="_blank" title="Follow me on GitHub: @{{ site.github_username }}">
+    <svg class="header__social__media header__social__media__github"><use xlink:href="#icon-github"></use></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/cesarcosta99/en?locale=en_US" target="_blank" title="Check it out my LinkedIn">
+    <svg class="header__social__media header__social__media__linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+    </a>
+    <a href="/feed.xml" target="_blank" title="Subscribe via RSS">
+    <svg class="header__social__media header__social__media__rss"><use xlink:href="#icon-rss"></use></svg>
+    </a>
+  </div>
+</header>

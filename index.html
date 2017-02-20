@@ -15,7 +15,7 @@ order: 0
         <span class="dot-divider"></span>
         <span>
           {% for tag in post.tags %}
-            #{{ tag }}
+            #{{ tag | slugify }}
           {% endfor %}
         </span>
       </div>

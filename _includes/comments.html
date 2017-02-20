@@ -1,0 +1,18 @@
+{% if page.comments %}
+  <section class="mains__comments">
+    <div id="disqus_thread"></div>
+    <script>
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//cesar-costa.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+      var disqus_config = function () {
+        this.page.title = '{{ page.title }}';
+        this.page.url = '{{ site.url }}{{ page.url }}';
+        this.page.identifier = '{{ page.url }}';
+      }
+    </script>
+  </section>
+{% endif %}
