@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" role="banner">
   <a href="/" class="header__profile-photo"><img src="/assets/img/profile-photo.jpeg" alt="Me smiling" /></a>
 
   <div class="header__title-description">
@@ -6,7 +6,7 @@
     <h2 class="header__description">{{ site.description }}</h2>
   </div>
 
-  <nav class="header__menu">
+  <nav class="header__menu" role="navigation">
     {% assign sorted_pages = site.pages | sort:'order' %}
     {% for page in sorted_pages %}
     {% if page.title %}

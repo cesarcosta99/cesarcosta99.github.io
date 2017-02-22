@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<article class="main__page">
-  <h1 class="main__page__title">{{ page.title }}</h1>
-  <div class="main__page__content">{{ content }}</div>
-</article>
+<div class="main__page">
+  <header role="banner">
+    <h1 class="main__page__title" itemprop="name">{{ page.title }}</h1>
+  </header>
+  <article class="main__page__content" role="article">{{ content }}</article>
+</div>
