@@ -3,21 +3,24 @@ layout: default
 ---
 {% include minutes-to-read.html %}
 
-<article class="main__post">
-  <h1 class="main__post__title">{{ page.title }}</h1>
-  <div class="main__post__meta">
-    <time class="main__post__meta__date" datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time>
-    <span class="dot-divider"></span>
-    <span class="main__post__meta__reading-time">{{ minutesText }}</span>
-    <span class="dot-divider"></span>
-    <span class="main__post__meta__tags">
-      {% for tag in page.tags %}
-        #{{ tag | slugify }}
-      {% endfor %}
-    </span>
-  </div>
-  <div class="main__post__content">{{ content }}</div>
-</article>
+<div class="main__post" itemid="{{ post.url }}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+  <header>
+    <h1 class="main__post__title" itemprop="name">{{ page.title }}</h1>
+    <h2 class="main__post__description" itemprop="description">{{ page.description }}</h2>
+    <div class="main__post__meta">
+      <time class="main__post__meta__date" datetime="{{ page.date }}" itemprop="datePublished">{{ page.date | date: '%B %d, %Y' }}</time>
+      <span class="dot-divider"></span>
+      <span class="main__post__meta__reading-time">{{ minutesText }}</span>
+      <span class="dot-divider"></span>
+      <span class="main__post__meta__tags" itemprop="keywords">
+        {% for tag in page.tags %}
+          #{{ tag | slugify }}
+        {% endfor %}
+      </span>
+    </div>
+  </header>
+  <article class="main__post__content" itemprop="articleBody">{{ content }}</article>
+</div>
 
 {% include share.html %}
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Python push notification server to APNS"
+description: "Setting up a server, key and certificate to get a iOS push notification service."
 permalink: /python-push-notification-server-to-apns/
 date: 2017-02-19T19:34:47.396Z
 categories: python
