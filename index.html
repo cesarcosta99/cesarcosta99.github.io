@@ -8,7 +8,7 @@ order: 0
 
 {% if site.posts.size > 0 %}
   <div class="main__posts">
-    {% for post in site.posts limit: 10 %}
+    {% for post in site.posts limit: 5 %}
       <article class="main__posts__item" itemid="{{ post.url }}" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
         <a href="{{ post.url }}"><h2 class="main__posts__item__title" itemprop="name">{{ post.title }}</h2></a>
         <p class="main__posts__item__description" itemprop="description">{{ post.description }}</p>
@@ -26,4 +26,22 @@ order: 0
   </div>
 {% else %}
   <h2>No posts found.</h2>
+{% endif %}
+
+<h1 class="main__index__title">Talks</h1>
+
+{% if site.slides.size > 0 %}
+  <div class="main__posts">
+    {% for slide in site.slides limit: 5 %}
+      <article class="main__posts__item">
+        <a href="{{ slide.url }}"><h2 class="main__posts__item__title">{{ slide.title }}</h2></a>
+        <p class="main__posts__item__description">{{ slide.description }}</p>
+        <div class="main__posts__item__meta">
+          <span>{{ slide.date | date: '%B %d, %Y' }}</span>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+{% else %}
+  <h2>No talks found.</h2>
 {% endif %}

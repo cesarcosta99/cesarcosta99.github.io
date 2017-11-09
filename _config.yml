@@ -28,6 +28,11 @@ sass:
   sass_dir: assets/css
   style: compressed
 
+# Collections
+collections:
+  slides:
+    output: true
+
 exclude:
   - Gemfile
   - Gemfile.lock
