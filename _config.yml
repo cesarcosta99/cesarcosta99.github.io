@@ -32,6 +32,20 @@ sass:
 collections:
   slides:
     output: true
+    permalink: /:collection/:title
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  -
+    scope:
+      type: "slides"
+    values:
+      layout: "slide"
 
 exclude:
   - Gemfile

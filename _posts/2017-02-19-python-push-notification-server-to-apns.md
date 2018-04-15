@@ -1,12 +1,9 @@
 ---
-layout: post
 title:  "Python push notification server to APNS"
 description: "Setting up a server, key and certificate to get a iOS push notification service."
-permalink: /python-push-notification-server-to-apns/
 date: 2017-02-19T19:34:47.396Z
 categories: python backend
 tags: python apns code solution
-comments: true
 ---
 
 Ladies and gentlemen, I'm opening the blog and the first post is about a problem I passed a few weeks ago. If you are passing through a similar problem I hope it can help you somehow.

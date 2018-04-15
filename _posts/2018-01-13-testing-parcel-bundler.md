@@ -1,12 +1,9 @@
 ---
-layout: post
 title:  "Testing Parcel bundler"
 description: "From Webpack2 to Parcel: zero configuration"
-permalink: /testing-parcel-bundler/
 date: 2018-01-13T03:50:37.327Z
 categories: javascript frontend
 tags: javascript bundler react boilerplate testing code
-comments: true
 ---
 
 ![terminal](/assets/img/posts/parcel.png)
