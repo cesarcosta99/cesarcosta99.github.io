@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="main__page">
-  <h1 class="main__page__title">{{ page.title }}</h1>
-  <div class="main__page__content">{{ content }}</div>
+<article class="main__page" itemprop="mainContentOfPage">
+  <h1 class="main__page__title" itemprop="name">{{ page.title }}</h1>
+  <div class="main__page__content" itemprop="text">{{ content }}</div>
 </article>
