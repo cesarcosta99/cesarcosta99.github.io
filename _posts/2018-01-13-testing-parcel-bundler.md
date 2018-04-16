@@ -6,7 +6,7 @@ categories: javascript frontend
 tags: javascript bundler react boilerplate testing code
 ---
 
-![terminal](/assets/img/posts/parcel.png)
+![Parcel](/assets/img/posts/parcel.png)
 
 Few months ago a new bundler has arrived and it is gaining adopters quickly: [Parcel](https://github.com/parcel-bundler/parcel). What makes it a good choice? I'll show you.
 
